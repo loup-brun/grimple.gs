@@ -17,7 +17,7 @@ By default, Grimple ships with three grid states:
 
 Grimple is built as a desktop-first grid sytem. Columns are built with percentages with % gutters as margins, which ensures compatibility with IE7 and lower.
 
-Also, Grimple has a complete set of push/pull classes if you wish to reorder the columns or give them an offset. By default, the `pull-` section is commented in the source since it is not used often. You can, however, uncomment the line in `_grimple.mixins.scss` and then compile the stylesheet (view compiling instructions [below](#contributing)).
+Also, Grimple has a complete set of offset classes for each namespace (tablet, phone, etc...). Just add the `.push-X`, where `X` is the number of columns you wish to offset your column.
 
 ### Contributing
 
