@@ -63,6 +63,12 @@ module.exports = function(grunt) {
 				precision: 3
 			}
 		},
+		
+		clean: {
+			dist: {
+				src: ['<%= paths.dist %>']
+			}
+		},
 
 		// watch: recompile on file save
 		watch: {
@@ -76,7 +82,7 @@ module.exports = function(grunt) {
 	grunt.registerTask(
 		'compile',
 		'Compile without minification',
-		['version', 'sass:compile']
+		['clean:dist', 'version', 'sass:compile']
 	);
 
 	grunt.registerTask(
