@@ -51,7 +51,7 @@ module.exports = function(grunt) {
 			// compile different stylesheets to be loaded async
 			compile: {
 				files: {
-					'<%= paths.dist %><%= pkg.name %>-<%= pkg.version %>.css': '<%= paths.src %>main.scss'
+					'<%= paths.dist %><%= pkg.name %>.css': '<%= paths.src %>main.scss'
 				},
 				options: {
 					style: 'compressed', // expanded for dev, compressed for production

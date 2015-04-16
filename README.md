@@ -3,7 +3,7 @@ Grimple.gs
 
 Dead simple, customizable, lightweight, cross-browser responsive grid system.
 
-**@version 0.1.0**
+**@version 0.1.3**
 
 Drop-in the grid by picking up the stylesheet in `dist/` or include the `scss` files located under `src/`.
 

@@ -1,6 +1,6 @@
 {
-  "name": "Grimple.gs",
-  "version": "0.1.0",
+  "name": "grimple.gs",
+  "version": "0.1.3",
   "description": "Dead simple, customizable, lightweight, cross-browser responsive grid system.",
   "main": "index.js",
   "scripts": {
