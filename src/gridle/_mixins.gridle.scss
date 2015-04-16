@@ -1,0 +1,21 @@
+// Gridle - Mixins
+// ----------------------------------------------
+
+// Grid generator
+@mixin grid($prefix: '') {
+
+	// If a non-empty string is provided, add  prefix with hyphen
+	@if ($prefix != '') {
+		$prefix: '#{$prefix}-';
+	}
+
+	@for $i from 1 through $number-of-columns {
+		.#{$prefix}col-#{$i} { width: 100% * $i / $number-of-columns; }
+
+		// Don't create a push/pull for the last column
+		@if $i != $number-of-columns {
+			.#{$prefix}push-#{$i} { margin-left: 100% * $i / $number-of-columns; }
+			.#{$prefix}pull-#{$i} { margin-left: -100% * $i / $number-of-columns; }
+		}
+	}
+}

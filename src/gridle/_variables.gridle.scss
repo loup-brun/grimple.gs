@@ -1,0 +1,11 @@
+// Gridle - Variables
+// ----------------------------------------------
+
+$number-of-columns:			12;
+$gutter:								20px;
+
+$breakpoints: (
+	(desktop),
+	(tablet, 768px),
+	(phone, 520px)
+);

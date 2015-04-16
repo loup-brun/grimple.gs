@@ -1,0 +1,48 @@
+// Gridle - Grid
+// @version 0.0.0
+// ----------------------------------------------
+
+@import
+	'../basal/mixins', // borrow some useful mixins from Basal
+	'variables.gridle',
+	'mixins.gridle'
+	;
+
+// Wrap columns in a .row element (need for clearfix)
+.row {
+	@include clearfix;
+	@include horizontal-margin(-$gutter / 2);
+	position: relative;
+}
+
+.col {
+	@include horizontal-margin($gutter);
+	float: left;
+	position: relative;
+}
+
+// Thanks to Matthew Simo for the base idea of this loop
+// matthewsimo.github.io/css-flex-grid/
+@each $val in $breakpoints {
+
+	// Default grid (with no media queries)
+	@if length($val) == 1 {
+
+		//$namespace: nth($val, 1);
+		$namespace: '';
+		@include grid($namespace);
+
+	} @else {
+
+		// Get the first value of the map, which is the namespace
+		$namespace: nth($val, 1);
+		// Get the second value of the map, the breakpoint value
+		$breakpoint: nth($val, 2);
+
+		// Desktop-first media queries
+		@include mquery($breakpoint) {
+			@include grid($namespace);
+		}
+	}
+}
+
