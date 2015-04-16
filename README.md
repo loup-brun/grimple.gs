@@ -3,17 +3,21 @@ Grimple.gs
 
 Dead simple, customizable, lightweight, cross-browser responsive grid system.
 
-**@version 0.1.3**
+**@version 0.1.4**
+
+### Features
 
 Drop-in the grid by picking up the stylesheet in `dist/` or include the `scss` files located under `src/`.
 
-By default, Grimple has three grid states:
+By default, Grimple ships with three grid states:
 
 - desktop default (unprefixed column classes)
 - tablet (768px and under)
 - phone (640px and under)
 
 Grimple is built as a desktop-first grid sytem. Columns are built with percentages with % gutters as margins, which ensures compatibility with IE7 and lower.
+
+Also, Grimple has a complete set of push/pull classes if you wish to reorder the columns or give them an offset. By default, the `pull-` section is commented in the source since it is not used often. You can, however, uncomment the line in `_grimple.mixins.scss` and then compile the stylesheet (view compiling instructions [below](#contributing)).
 
 ### Contributing
 

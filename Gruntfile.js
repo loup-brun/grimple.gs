@@ -54,7 +54,7 @@ module.exports = function(grunt) {
 					'<%= paths.dist %><%= pkg.name %>.css': '<%= paths.src %>main.scss'
 				},
 				options: {
-					style: 'compressed', // expanded for dev, compressed for production
+					style: 'expanded', // expanded for dev, compressed for production
 					sourcemap: 'file'
 				}
 			},
