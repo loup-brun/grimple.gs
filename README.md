@@ -3,7 +3,7 @@ Grimple.gs
 
 Dead simple, customizable, lightweight, cross-browser responsive grid system.
 
-**@version 0.1.4**
+**@version 0.1.5**
 
 ### Features
 
