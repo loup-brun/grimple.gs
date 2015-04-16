@@ -1,12 +1,13 @@
 {
-  "name": "gridle.gs",
-  "version": "0.0.1",
+  "name": "Grimple.gs",
+  "version": "0.1.0",
   "description": "Dead simple, cross-browser responsive grid system.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
+		"simple",
     "grid",
     "css",
     "sass",

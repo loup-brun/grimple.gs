@@ -1,22 +1,23 @@
-// Gridle - Grid
-// @version 0.0.0
+// Grimple - Grid
+// @version 0.1.0
 // ----------------------------------------------
 
 @import
 	'../basal/mixins', // borrow some useful mixins from Basal
-	'variables.gridle',
-	'mixins.gridle'
+	'grimple.variables',
+	'grimple.mixins'
 	;
 
 // Wrap columns in a .row element (need for clearfix)
 .row {
 	@include clearfix;
-	@include horizontal-margin(-$gutter / 2);
 	position: relative;
 }
 
 .col {
 	@include horizontal-margin($gutter);
+	@include vertical-margin(5px);
+	@include vertical-padding(5px); // optional
 	float: left;
 	position: relative;
 }

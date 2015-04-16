@@ -1,4 +1,4 @@
-// Gridle - Mixins
+// Grimple - Mixins
 // ----------------------------------------------
 
 // Grid generator
@@ -10,12 +10,12 @@
 	}
 
 	@for $i from 1 through $number-of-columns {
-		.#{$prefix}col-#{$i} { width: 100% * $i / $number-of-columns; }
+		.#{$prefix}col-#{$i} { width: (100% * $i / $number-of-columns) - 2 * $gutter; }
 
 		// Don't create a push/pull for the last column
 		@if $i != $number-of-columns {
-			.#{$prefix}push-#{$i} { margin-left: 100% * $i / $number-of-columns; }
-			.#{$prefix}pull-#{$i} { margin-left: -100% * $i / $number-of-columns; }
+			.#{$prefix}push-#{$i} { margin-left: (100% * $i / $number-of-columns) - 2 * $gutter; }
+			.#{$prefix}pull-#{$i} { margin-left: (-100% * $i / $number-of-columns) - 2 * $gutter; }
 		}
 	}
 }

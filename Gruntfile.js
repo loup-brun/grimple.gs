@@ -37,7 +37,14 @@ module.exports = function(grunt) {
 					// @version X.X.X
 					prefix: '@version\\s*'
 				},
-				src: ['<%= paths.src %>*.scss']
+				src: ['<%= paths.src %>*/**.scss']
+			},
+			readme: {
+				options: {
+					// @version X.X.X
+					prefix: '@version\\s*'
+				},
+				src: ['README.md']
 			}
 		},
 		sass: {
@@ -49,16 +56,6 @@ module.exports = function(grunt) {
 				options: {
 					style: 'compressed', // expanded for dev, compressed for production
 					sourcemap: 'file'
-				}
-			},
-
-			dist: {
-				files: {
-					'<%= paths.dist %><%= pkg.name %>-<%= pkg.version %>.css': '<%= paths.src %>main.scss'
-				},
-				options: {
-					style: 'compressed', // expanded for dev, compressed for production
-					sourcemap: 'none'
 				}
 			},
 
