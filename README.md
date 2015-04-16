@@ -3,7 +3,7 @@ Grimple.gs
 
 Dead simple, customizable, lightweight, cross-browser responsive grid system.
 
-** @version 0.1.0 **
+**@version 0.1.0**
 
 Drop-in the grid by picking up the stylesheet in `dist/` or include the `scss` files located under `src/`.
 
@@ -20,15 +20,15 @@ Grimple is built as a desktop-first grid sytem. Columns are built with percentag
 To start developing on your own, just run (assuming you have [Node.js](https://nodejs.org/) installed)
 
 ```
-$ npm install      // installs the build dependencies
-$ grunt dev        // automatically regenerate the files on save
+$ npm install           // installs the build dependencies
+$ grunt dev             // automatically regenerate the files on save
 ```
 
 You can easily customize your grid in the `grimple.variables.scss` by changinging the following variables:
 
 ```scss
-$number-of-columns:			12;
-$gutter:								1%;
+$number-of-columns:     12;
+$gutter:                1%;
 
 $breakpoints: (
 	(desktop),
